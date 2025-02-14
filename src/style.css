@@ -1,5 +1,6 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -7,17 +8,17 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-
-
 }
+
 .card-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .card {
-    width: 300px;
-    height: 400px;
+    width: 300px; /* Valor por defecto */
+    height: 400px; /* Valor por defecto */
     background-color: white;
     border-radius: 10px;
     display: flex;
@@ -30,29 +31,61 @@ body {
     position: relative;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
+    transition: width 0.3s ease, height 0.3s ease;
 }
+
 .top-left {
     position: absolute;
     top: 10px;
     left: 10px;
 }
+
 .bottom-right {
     position: absolute;
     bottom: 10px;
     right: 10px;
     transform: rotate(180deg);
 }
+
 .value {
-    font-size: 3rem;
+    font-size: 150px;
     font-weight: bold;
-}
-.heart, .diamond {
-    color: red;
-}
-.spade, .club {
-    color: black;
 }
 
 .heart, .diamond {
     color: red;
+}
+
+.spade, .club {
+    color: black;
+}
+
+/* Estilos para los controles */
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.controls input {
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.controls button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #427eff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.controls button:hover {
+    background-color: #0a0b61;
 }
