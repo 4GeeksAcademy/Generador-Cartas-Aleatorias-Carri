@@ -60,7 +60,11 @@ body {
     color: black;
 }
 
-/* Estilos para los controles */
+.value {
+    color: black !important;
+}
+
+
 .controls {
     display: flex;
     gap: 10px;
